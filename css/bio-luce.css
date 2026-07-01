@@ -1,0 +1,194 @@
+/* ============================================================
+   BIO — CORDICINA & LAMPADINA
+   ============================================================ */
+
+body.bio-page:not(.bio-lit) {
+  overflow: hidden;
+}
+
+.bio-dark-room {
+  position: fixed;
+  inset: 0;
+  z-index: 8000;
+  background: #000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding-top: 24px;
+  transition: opacity 1.4s var(--ease), visibility 1.4s;
+}
+
+.bio-dark-room.is-on {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.bio-dark-room.is-pulling {
+  background: radial-gradient(
+    ellipse 420px 280px at 50% 72px,
+    rgba(27, 79, 255, 0.12) 0%,
+    transparent 70%
+  ), #000;
+}
+
+.bio-dark-room.is-on.is-pulling,
+.bio-dark-room.is-on {
+  background: radial-gradient(
+    ellipse 600px 400px at 50% 72px,
+    rgba(27, 79, 255, 0.28) 0%,
+    transparent 65%
+  ), #000;
+}
+
+
+/* Lampadina */
+.bio-lamp {
+  position: relative;
+  margin-top: 8px;
+  opacity: 0.25;
+  transition: opacity 0.4s var(--ease), filter 0.8s var(--ease);
+}
+
+.bio-dark-room.is-pulling .bio-lamp,
+.bio-dark-room.is-on .bio-lamp {
+  opacity: 1;
+}
+
+.bio-lamp svg {
+  display: block;
+  width: 44px;
+  height: auto;
+}
+
+.bio-lamp-glow {
+  position: absolute;
+  top: 18px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(27, 79, 255, 0.55) 0%, rgba(91, 155, 255, 0.15) 45%, transparent 70%);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.6s var(--ease);
+}
+
+.bio-dark-room.is-pulling .bio-lamp-glow {
+  opacity: calc(var(--pull-progress, 0) * 0.5);
+}
+
+.bio-dark-room.is-on .bio-lamp-glow {
+  opacity: 1;
+}
+
+.bio-lamp-filament {
+  transition: stroke 0.3s, opacity 0.3s;
+}
+
+.bio-dark-room.is-pulling .bio-lamp-filament,
+.bio-dark-room.is-on .bio-lamp-filament {
+  stroke: var(--cobalt);
+  opacity: 1;
+}
+
+/* Cordicina */
+.bio-cord-wrap {
+  position: relative;
+  margin-top: -4px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.bio-cord-pendulum {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transform-origin: top center;
+  will-change: transform;
+}
+
+.bio-cord-string {
+  width: 2px;
+  height: 100px;
+  background: linear-gradient(to bottom, #8a9bb8, #c8d4e8);
+  border-radius: 1px;
+  will-change: height;
+}
+
+.bio-cord-pull {
+  width: 30px;
+  height: 44px;
+  margin-top: -2px;
+  background: linear-gradient(180deg, #c9a86c 0%, #8b6914 100%);
+  border-radius: 0 0 6px 6px;
+  cursor: none;
+  touch-action: none;
+  position: relative;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+  transition: transform 0.15s var(--ease);
+}
+
+.bio-cord-pull::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 20px;
+  height: 8px;
+  background: #a67c00;
+  border-radius: 2px 2px 0 0;
+}
+
+.bio-cord-pull:active {
+  transform: scale(0.96);
+}
+
+/* Contenuto sotto — buio finché non si accende */
+body.bio-page:not(.bio-lit) #main-content,
+body.bio-page:not(.bio-lit) .site-footer {
+  opacity: 0;
+  pointer-events: none;
+}
+
+body.bio-page.bio-lit #main-content,
+body.bio-page.bio-lit .site-footer {
+  opacity: 1;
+  pointer-events: auto;
+  transition: opacity 1s var(--ease) 0.2s;
+}
+
+body.bio-page:not(.bio-lit) .site-header {
+  opacity: 0.15;
+  pointer-events: none;
+}
+
+body.bio-page.bio-lit .site-header {
+  opacity: 1;
+  pointer-events: auto;
+  transition: opacity 0.8s var(--ease);
+}
+
+@media (min-width: 768px) {
+  .bio-lamp svg {
+    width: 56px;
+  }
+
+  .bio-cord-string {
+    height: 110px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .bio-dark-room,
+  .bio-lamp,
+  .bio-lamp-glow,
+  body.bio-page #main-content,
+  body.bio-page .site-footer {
+    transition: none;
+  }
+}

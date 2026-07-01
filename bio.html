@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="Cache-Control" content="no-store" />
+
+  <!-- SEO -->
+  <title>Bio — Sara Murru | Media Designer IED Roma</title>
+  <meta name="description" content="La storia di Sara Murru: media designer, atleta di taekwondo, studentessa IED Roma. Creatività, psicologia visiva e un percorso fuori dagli schemi." />
+
+  <!-- Open Graph -->
+  <meta property="og:title"       content="Chi sono — Sara Murru | Media Designer IED Roma" />
+  <meta property="og:description" content="La storia di Sara Murru: dalla sociologia al media design, passando per il taekwondo. Una designer fuori dagli schemi, studentessa IED Roma." />
+  <meta property="og:image"       content="https://saramurru.com/img/og-image.jpg" />
+  <meta property="og:url"         content="https://saramurru.com/bio.html" />
+  <meta property="og:type"        content="website" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="img/logo.png" />
+  <link rel="apple-touch-icon" href="img/logo.png" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/bio-luce.css" />
+</head>
+<body class="bio-page">
+
+  <div class="page-transition" id="page-transition"></div>
+
+  <!-- Stanza buia — tira la cordicina per accendere -->
+  <div id="bio-dark-room" class="bio-dark-room" role="dialog" aria-modal="true" aria-label="Tira la cordicina per accendere la luce">
+    <div class="bio-lamp" aria-hidden="true">
+      <div class="bio-lamp-glow"></div>
+      <svg viewBox="0 0 56 80" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <line x1="28" y1="0" x2="28" y2="14" stroke="#8a9bb8" stroke-width="2"/>
+        <path d="M18 18 C18 14 22 12 28 12 C34 12 38 14 38 18 C38 26 36 30 35 34 L21 34 C20 30 18 26 18 18 Z" fill="none" stroke="#A8CFFF" stroke-width="1.5"/>
+        <line class="bio-lamp-filament" x1="28" y1="20" x2="28" y2="30" stroke="#5B9BFF" stroke-width="1.5" opacity="0.5"/>
+        <path d="M21 34 L35 34 L33 42 L23 42 Z" fill="none" stroke="#A8CFFF" stroke-width="1.5"/>
+      </svg>
+    </div>
+    <div class="bio-cord-wrap">
+      <div class="bio-cord-pendulum" id="bio-cord-pendulum">
+        <div class="bio-cord-string" aria-hidden="true"></div>
+        <button type="button" class="bio-cord-pull" id="bio-cord-pull" aria-label="Tira la cordicina per accendere"></button>
+      </div>
+    </div>
+  </div>
+
+  <!-- CURSORE CUSTOM -->
+  <div class="cursor" aria-hidden="true"></div>
+
+  <!-- LIGHTBOX -->
+  <div id="lightbox" role="dialog" aria-modal="true" aria-label="Visualizzazione immagine ingrandita">
+    <button id="lightbox-close" aria-label="Chiudi lightbox">×</button>
+    <img id="lightbox-img" src="" alt="Immagine ingrandita" />
+  </div>
+
+  <!-- COOKIE BANNER -->
+  <aside id="cookie-banner" class="cookie-banner" role="complementary" aria-label="Informativa cookie">
+    <p>Questo sito utilizza cookie tecnici per migliorare l'esperienza di navigazione. Consulta la <a href="privacy.html">Privacy Policy</a> per maggiori informazioni.</p>
+    <div class="cookie-actions">
+      <button id="accept-cookies" class="btn-primary">Accetta</button>
+    </div>
+  </aside>
+
+  <!-- HEADER -->
+  <header class="site-header" role="banner">
+    <a href="index.html" class="logo" aria-label="Sara Murru - Homepage">
+      <img src="img/logo.png" alt="Sara Murru">
+    </a>
+
+    <nav class="main-nav" role="navigation" aria-label="Navigazione principale">
+      <a href="index.html">Home</a>
+      <a href="bio.html" class="active">Bio</a>
+      <a href="portfolio.html">Portfolio</a>
+      <a href="contatti.html">Contatti</a>
+    </nav>
+
+    <button class="hamburger" aria-label="Apri menu di navigazione" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </header>
+
+  <!-- MOBILE NAV -->
+  <nav class="mobile-nav" role="navigation" aria-label="Navigazione mobile">
+    <a href="index.html">Home</a>
+    <a href="bio.html" class="active">Bio</a>
+    <a href="portfolio.html">Portfolio</a>
+    <a href="contatti.html">Contatti</a>
+  </nav>
+
+  <main id="main-content">
+
+    <section class="bio-hero section">
+      <div class="container">
+        <p class="section-label">Bio</p>
+        <h1 class="bio-hero-title">Una designer<br/><span class="text-accent">fuori dagli schemi.</span></h1>
+        <p class="bio-hero-sub">Roma · IED Media Design · Taekwondo · Psicologia Visiva</p>
+      </div>
+    </section>
+
+    <section class="section bio-story">
+      <div class="container">
+
+        <div class="bio-block reveal">
+          <figure class="bio-block-img">
+            <img src="img/sara_1.jpg" alt="Sara Murru al lavoro sul design" data-lightbox="img/sara_1.jpg" />
+            <figcaption>Sara Murru</figcaption>
+          </figure>
+          <div class="bio-block-text">
+            <h2>Dal linguaggio delle persone al linguaggio visivo.</h2>
+            <p>Ho studiato sociologia per tre anni a Roma Tre. Non è stata una deviazione, è stata la mia formazione più preziosa come designer. Capire come le persone costruiscono significato, come reagiscono agli stimoli visivi, come si formano le percezioni collettive: tutto questo è entrato nel mio modo di progettare.</p>
+            <p>Ogni mio lavoro parte da una domanda psicologica: cosa fa sì che qualcosa resti nella mente? Cosa fa scattare quel "oddio lo voglio anch'io"? La risposta sta nel colore, nella composizione, nella tensione tra ciò che si vede e ciò che si sente.</p>
+          </div>
+        </div>
+
+        <div class="bio-block bio-block--reverse reveal">
+          <figure class="bio-block-img">
+            <img src="img/sara_tkd.jpg" alt="Sara Murru durante una gara di taekwondo" data-lightbox="img/sara_tkd.jpg" />
+            <figcaption>Sara Murru in dobok</figcaption>
+          </figure>
+          <div class="bio-block-text">
+            <h2>La disciplina che mi ha formata.</h2>
+            <p>Pratico taekwondo da quando avevo 5 anni. Ho una mia palestra a Roma dove insegno e mi alleno ogni giorno. Ho gareggiato in tutto il mondo e fatto parte della nazionale italiana. Il taekwondo mi ha insegnato che la perfezione tecnica non basta, serve intenzione, presenza, energia.</p>
+            <p>Quella stessa intenzione la porto nel design. Non faccio mai qualcosa "tanto per". Ogni scelta ha un perché. Ogni colore, ogni spazio, ogni font è una decisione consapevole.</p>
+          </div>
+        </div>
+
+        <div class="bio-block reveal">
+          <figure class="bio-block-img">
+            <img src="img/sara_ied.jpg" alt="Sara Murru allo IED di Roma" data-lightbox="img/sara_ied.jpg" />
+            <figcaption>Sara Murru allo ied</figcaption>
+          </figure>
+          <div class="bio-block-text">
+            <h2>Media Design allo IED di Roma.</h2>
+            <p>Oggi sono al primo anno di Media Design allo IED di Roma. È il posto dove tutto quello che ho vissuto, la sociologia, lo sport, la creatività visiva, trova finalmente un linguaggio unico. Studio la comunicazione visiva come sistema: come un'immagine parla, come un manifesto convince, come un sito racconta una storia.</p>
+            <p>Il blu è la mia firma visiva. Non per caso, è il colore della fiducia, della profondità, dell'intuizione. È il colore con cui vedo il mondo.</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="section bio-cta">
+      <div class="container">
+        <p class="section-label">Cosa faccio</p>
+        <h2>Vuoi vedere i miei lavori?</h2>
+        <a href="portfolio.html" class="btn-primary">Vai al Portfolio →</a>
+        <a href="img/curriculum murru sara.pdf" download class="btn-secondary">Scarica il CV ↓</a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ======================================================
+       FOOTER
+  ====================================================== -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+
+      <div class="footer-top">
+
+        <div class="footer-brand">
+          <a href="index.html" class="logo" aria-label="Sara Murru - Homepage">
+            <img src="img/logo.png" alt="Sara Murru">
+          </a>
+          <p>Media designer romana. Design che lascia il segno, pensato per colpire nel profondo.</p>
+          <div class="social-links" aria-label="Social media">
+            <a href="https://it.linkedin.com/in/sara-murru-6b414a353" class="social-link" aria-label="LinkedIn" rel="noopener" target="_blank">in</a>
+            <a href="https://www.instagram.com/_murrusara_?igsh=MXZjZmljdmwyMW53cw%3D%3D&utm_source=qr" class="social-link" aria-label="Instagram" rel="noopener" target="_blank">ig</a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Navigazione</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="bio.html">Bio</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="contatti.html">Contatti</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Lavori</h4>
+          <ul>
+            <li><a href="lavoro-spotify.html">Spotify Series</a></li>
+            <li><a href="lavoro-poster.html">Poster</a></li>
+            <li><a href="lavoro-manifesti-tipo.html">Manifesti Tipografici</a></li>
+            <li><a href="lavoro-manifesti-foto.html">Manifesti Fotografici</a></li>
+            <li><a href="lavoro-palestra.html">Web Design</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Contatti</h4>
+          <ul>
+            <li><a href="mailto:s.murru@ied.edu">s.murru@ied.edu</a></li>
+            <li><a href="contatti.html">Scrivimi</a></li>
+            <li><a href="privacy.html">Privacy Policy</a></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2026 Sara Murru — Tutti i diritti riservati</p>
+        <a href="privacy.html">Privacy Policy &amp; T&amp;C</a>
+      </div>
+
+    </div>
+
+  </footer>
+
+  <!-- JS -->
+  <script src="js/main.js"></script>
+  <script src="js/bio-luce.js"></script>
+
+<div class="music-pill" id="music-pill">
+  <button class="pill-play" id="pill-play" aria-label="Play/Pausa">▶</button>
+  <div class="pill-info">
+    <span class="pill-title" id="pill-title">Del Verde — Calcutta</span>
+  </div>
+  <div class="pill-dots">
+    <span></span><span></span><span></span>
+  </div>
+</div>
+
+<div class="music-pill-expanded" id="music-pill-expanded">
+  <button class="pill-btn" id="pill-prev">‹</button>
+  <button class="pill-btn pill-btn--play" id="pill-play-2">▶</button>
+  <button class="pill-btn" id="pill-next">›</button>
+</div>
+</body>
+</html>

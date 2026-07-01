@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="Cache-Control" content="no-store" />
+
+  <!-- SEO -->
+  <title>Sara Murru — Media Designer & Art Director | Roma</title>
+  <meta name="description" content="Portfolio di Sara Murru, media designer e art director con sede a Roma. Progetti di branding, editorial design, tipografia e web design pensati per colpire." />
+
+  <!-- Open Graph -->
+  <meta property="og:title"       content="Sara Murru — Media Designer & Art Director" />
+  <meta property="og:description" content="Portfolio di Sara Murru, media designer con sede a Roma. Progetti che lasciano il segno." />
+  <meta property="og:image"       content="https://saramurru.com/img/og-image.jpg" />
+  <meta property="og:url"         content="https://saramurru.com/index.html" />
+  <meta property="og:type"        content="website" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="img/logo.png" />
+  <link rel="apple-touch-icon" href="img/logo.png" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <div id="intro-overlay" class="intro-overlay">
+    <div class="intro-scene">
+
+      <div class="intro-ticket" id="intro-ticket">
+        <div class="ticket-left">
+          <div class="ticket-airline">🦇 PIPISTRELLO AIR</div>
+          <div class="ticket-route">
+            <div class="ticket-from">
+              <span class="ticket-code">TU</span>
+              <span class="ticket-city">Il tuo mondo</span>
+            </div>
+            <div class="ticket-arrow">✈</div>
+            <div class="ticket-to">
+              <span class="ticket-code">PIP</span>
+              <span class="ticket-city">Pipistrello Portfolio</span>
+            </div>
+          </div>
+          <div class="ticket-info">
+            <div class="ticket-info-item"><span>PASSEGGERO</span><p>Visitatore Curioso</p></div>
+            <div class="ticket-info-item"><span>GATE</span><p>B4T</p></div>
+            <div class="ticket-info-item"><span>IMBARCO</span><p>ORA</p></div>
+            <div class="ticket-info-item"><span>CLASSE</span><p>CREATIVA</p></div>
+          </div>
+          <div class="ticket-barcode">
+            <div class="ticket-barcode-lines"></div>
+            <span>SM2026-PORTFOLIO</span>
+          </div>
+        </div>
+        <div class="ticket-tear"></div>
+        <div class="ticket-right">
+          <div class="ticket-stub-airline">🦇</div>
+          <div class="ticket-stub-code">PIP</div>
+          <div class="ticket-stub-text">PORTFOLIO</div>
+          <div class="ticket-stub-seat">POSTO<br/>A1</div>
+        </div>
+      </div>
+
+      <button class="intro-btn" id="intro-btn">
+        Procedi all'imbarco →
+      </button>
+
+    </div>
+
+    <div class="intro-window" id="intro-window">
+      <div class="window-frame">
+        <div class="window-glass" id="window-glass">
+          <div class="intro-phase-text" id="phase-text">Preparazione al decollo...</div>
+          <div class="ground" id="ground">
+            <div class="runway">
+              <div class="runway-line"></div>
+              <div class="runway-line"></div>
+              <div class="runway-line"></div>
+              <div class="runway-line"></div>
+              <div class="runway-line"></div>
+              <div class="runway-line"></div>
+              <div class="runway-line"></div>
+              <div class="runway-line"></div>
+            </div>
+          </div>
+          <div class="clouds-wrap">
+            <div class="cloud cloud-1"></div>
+            <div class="cloud cloud-2"></div>
+            <div class="cloud cloud-3"></div>
+            <div class="cloud cloud-4"></div>
+            <div class="cloud cloud-5"></div>
+          </div>
+          <div class="wing" id="wing"></div>
+        </div>
+      </div>
+      <button class="intro-skip-btn" id="intro-skip-btn">Salta il volo →</button>
+      <div class="intro-landing-text" id="landing-text">Benvenut* nel mio portfolio</div>
+    </div>
+
+  </div>
+
+  <div class="page-transition" id="page-transition"></div>
+
+  <!-- CURSORE CUSTOM -->
+  <div class="cursor" aria-hidden="true"></div>
+
+  <!-- LIGHTBOX -->
+  <div id="lightbox" role="dialog" aria-modal="true" aria-label="Visualizzazione immagine ingrandita">
+    <button id="lightbox-close" aria-label="Chiudi lightbox">×</button>
+    <img id="lightbox-img" src="" alt="Immagine ingrandita" />
+  </div>
+
+  <!-- COOKIE BANNER -->
+  <aside id="cookie-banner" class="cookie-banner" role="complementary" aria-label="Informativa cookie">
+    <p>Questo sito utilizza cookie tecnici per migliorare l'esperienza di navigazione. Consulta la <a href="privacy.html">Privacy Policy</a> per maggiori informazioni.</p>
+    <div class="cookie-actions">
+      <button id="accept-cookies" class="btn-primary">Accetta</button>
+    </div>
+  </aside>
+
+  <!-- HEADER -->
+  <header class="site-header" role="banner">
+    <a href="index.html" class="logo" aria-label="Sara Murru - Homepage">
+      <img src="img/logo.png" alt="Sara Murru">
+    </a>
+
+    <nav class="main-nav" role="navigation" aria-label="Navigazione principale">
+      <a href="index.html" class="active">Home</a>
+      <a href="bio.html">Bio</a>
+      <a href="portfolio.html">Portfolio</a>
+      <a href="contatti.html">Contatti</a>
+    </nav>
+
+    <button class="hamburger" aria-label="Apri menu di navigazione" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </header>
+
+  <!-- MOBILE NAV -->
+  <nav class="mobile-nav" role="navigation" aria-label="Navigazione mobile">
+    <a href="index.html" class="active">Home</a>
+    <a href="bio.html">Bio</a>
+    <a href="portfolio.html">Portfolio</a>
+    <a href="contatti.html">Contatti</a>
+  </nav>
+
+  <main id="main-content">
+
+    <!-- ======================================================
+         HERO
+    ====================================================== -->
+    <section class="hero" aria-label="Presentazione">
+      <canvas id="particles-canvas"></canvas>
+      <div class="hero-bg" aria-hidden="true"></div>
+
+      <p class="hero-eyebrow">Media Designer &amp; Art Director — Roma</p>
+
+      <h1 class="hero-title">
+        Sara
+        <span class="line-accent">Murru</span>
+      </h1>
+
+      <div class="hero-bottom">
+        <p class="hero-desc">
+          Design che lascia il segno. Ogni progetto nasce dall'intersezione tra psicologia visiva, sociologia e una creatività che non si accontenta del già visto.
+        </p>
+        <div class="hero-scroll" aria-hidden="true">
+          <span class="hero-scroll-line"></span>
+          <span>Scroll</span>
+        </div>
+      </div>
+    </section>
+
+    <div class="ticker-wrap" aria-hidden="true">
+      <div class="ticker-track">
+        <span>Sara Murru</span><span>✦</span>
+        <span>Portfolio</span><span>✦</span>
+        <span>Pipistrello</span><span>✦</span>
+        <span>Sara Murru</span><span>✦</span>
+        <span>Portfolio</span><span>✦</span>
+        <span>Pipistrello</span><span>✦</span>
+        <span>Sara Murru</span><span>✦</span>
+        <span>Portfolio</span><span>✦</span>
+        <span>Pipistrello</span><span>✦</span>
+        <span>Sara Murru</span><span>✦</span>
+        <span>Portfolio</span><span>✦</span>
+        <span>Pipistrello</span><span>✦</span>
+      </div>
+    </div>
+
+    <!-- ======================================================
+         CAROUSEL LAVORI
+    ====================================================== -->
+    <section class="section" aria-label="Lavori in evidenza">
+      <div class="container">
+        <p class="section-label reveal">Lavori selezionati</p>
+
+        <div class="carousel reveal reveal-delay-1" role="region" aria-label="Carousel dei progetti">
+          <div class="carousel-track">
+
+            <article class="carousel-slide">
+              <img src="img/manifesti-foto-1.jpg" alt="Progetto Spotify - copertine e poster" loading="lazy" />
+              <div class="carousel-content">
+                <h2>Spotify Series</h2>
+                <p>Copertine e poster pensati per colpire nell'era dello streaming</p>
+                <a href="lavoro-spotify.html" class="carousel-link">Vedi il progetto →</a>
+              </div>
+            </article>
+
+            <article class="carousel-slide">
+              <img src="img/manifesti-foto-2.jpg" alt="Manifesti fotografici" loading="lazy" />
+              <div class="carousel-content">
+                <h2>Manifesti Fotografici</h2>
+                <p>L'immagine come linguaggio primario, la tipografia come ritmo</p>
+                <a href="lavoro-manifesti-foto.html" class="carousel-link">Vedi il progetto →</a>
+              </div>
+            </article>
+
+            <article class="carousel-slide">
+              <img src="img/poster-1.jpg" alt="Sito web palestra taekwondo" loading="lazy" />
+              <div class="carousel-content">
+                <h2>Web Design — Palestra</h2>
+                <p>Un sito che racconta la disciplina, la forza e la community del taekwondo</p>
+                <a href="lavoro-palestra.html" class="carousel-link">Vedi il progetto →</a>
+              </div>
+            </article>
+
+          </div>
+
+          <!-- Controlli -->
+          <div class="carousel-controls" aria-label="Controlli carousel">
+            <button class="carousel-btn prev" aria-label="Slide precedente">←</button>
+            <button class="carousel-btn next" aria-label="Slide successiva">→</button>
+          </div>
+        </div>
+
+        <!-- Dots -->
+        <div class="carousel-dots" role="tablist" aria-label="Posizione carousel">
+          <button class="carousel-dot active" role="tab" aria-label="Slide 1" aria-selected="true"></button>
+          <button class="carousel-dot" role="tab" aria-label="Slide 2" aria-selected="false"></button>
+          <button class="carousel-dot" role="tab" aria-label="Slide 3" aria-selected="false"></button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================
+         ESTRATTO BIO
+    ====================================================== -->
+    <section class="section bio-extract" aria-label="Chi sono">
+      <div class="container">
+        <div class="bio-extract-inner">
+
+          <div class="bio-extract-img reveal">
+            <img src="img/sara_1.jpg" alt="Sara Murru — media designer e atleta di taekwondo" />
+          </div>
+
+          <div class="bio-extract-text">
+            <p class="section-label reveal">Chi sono</p>
+            <h2 class="reveal reveal-delay-1">Creo design che<br/>vuoi possedere.</h2>
+            <p class="reveal reveal-delay-2">Sono Sara Murru, 23 anni, romana. Studio Media Design allo IED di Roma, ma il mio percorso parte dalla sociologia: tre anni a capire le persone, come pensano, cosa le muove. Oggi lo faccio attraverso il design.</p>
+
+            <p class="reveal reveal-delay-2">Ogni progetto nasce da una domanda: perché certe cose restano nella mente e altre no? Il colore, la texture, la psicologia visiva sono i miei strumenti. Il blu è la mia firma.</p>
+
+            <div class="bio-extract-tags reveal reveal-delay-3">
+              <span class="tag">Media Design</span>
+              <span class="tag">Taekwondo</span>
+              <span class="tag">IED Roma</span>
+              <span class="tag">Psicologia Visiva</span>
+              <span class="tag">Pipistrello 🦇</span>
+            </div>
+
+            <div class="bio-extract-ctas reveal reveal-delay-4">
+              <a href="bio.html" class="btn-primary">Leggi la mia storia</a>
+              <a href="img/curriculum murru sara.pdf" download class="btn-secondary">Scarica il CV ↓</a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================
+         PORTFOLIO PREVIEW
+    ====================================================== -->
+    <section class="section portfolio-preview">
+      <div class="container">
+        <div class="portfolio-preview-header reveal">
+          <h2>Lavori<br/>selezionati</h2>
+          <a href="portfolio.html" class="btn-secondary">Vedi tutto →</a>
+        </div>
+
+        <div class="vinyl-grid">
+
+          <div class="vinyl-item reveal" data-href="lavoro-spotify.html">
+            <div class="vinyl-sleeve">
+              <img class="vinyl-sleeve-img" src="img/spotify-1.jpg.jpg" alt="Spotify Series" />
+              <div class="vinyl-disc"></div>
+            </div>
+            <div class="vinyl-label">
+              <span>Photoshop</span>
+              <h3>Spotify Series</h3>
+            </div>
+          </div>
+
+          <div class="vinyl-item reveal reveal-delay-1" data-href="lavoro-poster.html">
+            <div class="vinyl-sleeve">
+              <img class="vinyl-sleeve-img" src="img/poster-1.jpg" alt="Poster" />
+              <div class="vinyl-disc"></div>
+            </div>
+            <div class="vinyl-label">
+              <span>Photoshop</span>
+              <h3>Poster</h3>
+            </div>
+          </div>
+
+          <div class="vinyl-item reveal reveal-delay-2" data-href="lavoro-illustra-parole.html">
+            <div class="vinyl-sleeve">
+              <img class="vinyl-sleeve-img" src="img/illustra-1.jpg" alt="Illustra le Parole" />
+              <div class="vinyl-disc"></div>
+            </div>
+            <div class="vinyl-label">
+              <span>Photoshop</span>
+              <h3>Illustra le Parole</h3>
+            </div>
+          </div>
+
+          <div class="vinyl-item reveal reveal-delay-3" data-href="lavoro-collage.html">
+            <div class="vinyl-sleeve">
+              <img class="vinyl-sleeve-img" src="img/collage-1.jpg" alt="Collage" />
+              <div class="vinyl-disc"></div>
+            </div>
+            <div class="vinyl-label">
+              <span>Photoshop</span>
+              <h3>Collage</h3>
+            </div>
+          </div>
+
+          <div class="vinyl-item reveal reveal-delay-1" data-href="lavoro-manifesti-foto.html">
+            <div class="vinyl-sleeve">
+              <img class="vinyl-sleeve-img" src="img/manifesti-foto-1.jpg" alt="Manifesti Fotografici" />
+              <div class="vinyl-disc"></div>
+            </div>
+            <div class="vinyl-label">
+              <span>Illustrator</span>
+              <h3>Manifesti Fotografici</h3>
+            </div>
+          </div>
+
+          <div class="vinyl-item reveal reveal-delay-2" data-href="lavoro-manifesti-tipo.html">
+            <div class="vinyl-sleeve">
+              <img class="vinyl-sleeve-img" src="img/manifesti-tipo-1.jpg" alt="Manifesti Tipografici" />
+              <div class="vinyl-disc"></div>
+            </div>
+            <div class="vinyl-label">
+              <span>Illustrator</span>
+              <h3>Manifesti Tipografici</h3>
+            </div>
+          </div>
+
+          <div class="vinyl-item reveal reveal-delay-3" data-href="lavoro-palestra.html">
+            <div class="vinyl-sleeve">
+              <img class="vinyl-sleeve-img" src="img/palestra-1.jpg" alt="Palestra" />
+              <div class="vinyl-disc"></div>
+            </div>
+            <div class="vinyl-label">
+              <span>Web Design</span>
+              <h3>Palestra Taekwondo</h3>
+            </div>
+          </div>
+
+        </div>
+
+        <div id="vinyl-overlay" class="vinyl-overlay">
+          <div class="vinyl-overlay-disc"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================
+         FORM CONTATTI HOMEPAGE
+    ====================================================== -->
+    <section class="section contact-section" aria-label="Contattami">
+      <div class="container">
+        <div class="contact-inner">
+
+          <div class="contact-text reveal">
+            <p class="section-label">Lavoriamo insieme</p>
+            <h2>Hai un progetto<br/>in mente?</h2>
+            <p>
+              Che si tratti di branding, editorial, web o qualcosa di completamente fuori dagli schemi — sono qui. Raccontami la tua idea.
+            </p>
+          </div>
+
+          <form class="contact-form reveal reveal-delay-2" action="#" method="post" novalidate>
+            <div class="form-group">
+              <label for="nome">Nome</label>
+              <input type="text" id="nome" name="nome" placeholder="Il tuo nome" required autocomplete="given-name" />
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" placeholder="tua@email.com" required autocomplete="email" />
+            </div>
+
+            <div class="form-group">
+              <label for="oggetto">Oggetto</label>
+              <input type="text" id="oggetto" name="oggetto" placeholder="Di cosa si tratta?" required />
+            </div>
+
+            <div class="form-group">
+              <label for="messaggio">Messaggio</label>
+              <textarea id="messaggio" name="messaggio" placeholder="Raccontami tutto..." required></textarea>
+            </div>
+
+            <button type="submit" class="btn-primary">Invia il messaggio →</button>
+          </form>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ======================================================
+       FOOTER
+  ====================================================== -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+
+      <div class="footer-top">
+
+        <div class="footer-brand">
+          <a href="index.html" class="logo" aria-label="Sara Murru - Homepage">
+            <img src="img/logo.png" alt="Sara Murru">
+          </a>
+          <p>Media designer romana. Design che lascia il segno, pensato per colpire nel profondo.</p>
+          <div class="social-links" aria-label="Social media">
+            <a href="https://it.linkedin.com/in/sara-murru-6b414a353" class="social-link" aria-label="LinkedIn" rel="noopener" target="_blank">in</a>
+            <a href="https://www.instagram.com/_murrusara_?igsh=MXZjZmljdmwyMW53cw%3D%3D&utm_source=qr" class="social-link" aria-label="Instagram" rel="noopener" target="_blank">ig</a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Navigazione</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="bio.html">Bio</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="contatti.html">Contatti</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Lavori</h4>
+          <ul>
+            <li><a href="lavoro-spotify.html">Spotify Series</a></li>
+            <li><a href="lavoro-poster.html">Poster</a></li>
+            <li><a href="lavoro-manifesti-tipo.html">Manifesti Tipografici</a></li>
+            <li><a href="lavoro-manifesti-foto.html">Manifesti Fotografici</a></li>
+            <li><a href="lavoro-palestra.html">Web Design</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Contatti</h4>
+          <ul>
+            <li><a href="mailto:s.murru@ied.edu">s.murru@ied.edu</a></li>
+            <li><a href="contatti.html">Scrivimi</a></li>
+            <li><a href="privacy.html">Privacy Policy</a></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2026 Sara Murru — Tutti i diritti riservati</p>
+        <a href="privacy.html">Privacy Policy &amp; T&amp;C</a>
+      </div>
+
+    </div>
+
+  </footer>
+
+  <!-- JS -->
+  <script src="js/main.js"></script>
+
+<div class="music-pill" id="music-pill">
+  <button class="pill-play" id="pill-play" aria-label="Play/Pausa">▶</button>
+  <div class="pill-info">
+    <span class="pill-title" id="pill-title">Del Verde — Calcutta</span>
+  </div>
+  <div class="pill-dots">
+    <span></span><span></span><span></span>
+  </div>
+</div>
+
+<div class="music-pill-expanded" id="music-pill-expanded">
+  <button class="pill-btn" id="pill-prev">‹</button>
+  <button class="pill-btn pill-btn--play" id="pill-play-2">▶</button>
+  <button class="pill-btn" id="pill-next">›</button>
+</div>
+</body>
+</html>
