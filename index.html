@@ -3,7 +3,6 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta http-equiv="Cache-Control" content="no-store" />
 
   <!-- SEO -->
   <title>Sara Murru — Media Designer & Art Director | Roma</title>
@@ -114,7 +113,7 @@
   <!-- LIGHTBOX -->
   <div id="lightbox" role="dialog" aria-modal="true" aria-label="Visualizzazione immagine ingrandita">
     <button id="lightbox-close" aria-label="Chiudi lightbox">×</button>
-    <img id="lightbox-img" src="" alt="Immagine ingrandita" />
+    <img id="lightbox-img" src="data:," alt="">
   </div>
 
   <!-- COOKIE BANNER -->
@@ -244,16 +243,16 @@
 
           </div>
 
-          <div class="carousel-controls" aria-label="Controlli carousel">
+          <div class="carousel-controls">
             <button class="carousel-btn prev" aria-label="Slide precedente">←</button>
             <button class="carousel-btn next" aria-label="Slide successiva">→</button>
           </div>
         </div>
 
-        <div class="carousel-dots" role="tablist" aria-label="Posizione carousel">
-          <button class="carousel-dot active" role="tab" aria-label="Slide 1" aria-selected="true"></button>
-          <button class="carousel-dot" role="tab" aria-label="Slide 2" aria-selected="false"></button>
-          <button class="carousel-dot" role="tab" aria-label="Slide 3" aria-selected="false"></button>
+        <div class="carousel-dots">
+          <button class="carousel-dot active" aria-label="Slide 1"></button>
+          <button class="carousel-dot" aria-label="Slide 2"></button>
+          <button class="carousel-dot" aria-label="Slide 3"></button>
         </div>
       </div>
     </section>
@@ -284,7 +283,7 @@
 
             <div class="bio-extract-ctas reveal reveal-delay-4">
               <a href="bio.html" class="btn-primary">Leggi la mia storia</a>
-              <a href="img/curriculum murru sara.pdf" download class="btn-secondary">Scarica il CV ↓</a>
+              <a href="img/curriculum%20murru%20sara.pdf" download class="btn-secondary">Scarica il CV ↓</a>
             </div>
           </div>
 
@@ -441,14 +440,14 @@
             <img src="img/logo.png" alt="Sara Murru">
           </a>
           <p>Media designer romana. Design che lascia il segno, pensato per colpire nel profondo.</p>
-          <div class="social-links" aria-label="Social media">
+          <div class="social-links" role="list">
             <a href="https://it.linkedin.com/in/sara-murru-6b414a353" class="social-link" aria-label="LinkedIn" rel="noopener" target="_blank">in</a>
             <a href="https://www.instagram.com/_murrusara_?igsh=MXZjZmljdmwyMW53cw%3D%3D&utm_source=qr" class="social-link" aria-label="Instagram" rel="noopener" target="_blank">ig</a>
           </div>
         </div>
 
         <div class="footer-col">
-          <h4>Navigazione</h4>
+          <h3>Navigazione</h3>
           <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="bio.html">Bio</a></li>
@@ -458,7 +457,7 @@
         </div>
 
         <div class="footer-col">
-          <h4>Lavori</h4>
+          <h3>Lavori</h3>
           <ul>
             <li><a href="lavoro-spotify.html">Spotify Series</a></li>
             <li><a href="lavoro-poster.html">Poster</a></li>
@@ -469,7 +468,7 @@
         </div>
 
         <div class="footer-col">
-          <h4>Contatti</h4>
+          <h3>Contatti</h3>
           <ul>
             <li><a href="mailto:s.murru@ied.edu">s.murru@ied.edu</a></li>
             <li><a href="contatti.html">Scrivimi</a></li>

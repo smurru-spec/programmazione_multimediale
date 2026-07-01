@@ -2014,7 +2014,7 @@ p {
   color: var(--cobalt);
 }
 
-.footer-col h4 {
+.footer-col h3 {
   font-family: var(--font-display);
   font-size: 13px;
   font-weight: 600;
@@ -2942,7 +2942,7 @@ body.theme-red .work-nav-next { color: #FF3B5C; }
 body.theme-red .btn-primary { background: #FF3B5C; }
 body.theme-red .text-accent { color: #FF3B5C; }
 body.theme-red .work-text h2 { color: #FF3B5C; }
-body.theme-red .footer-col h4 { color: #FF3B5C; }
+body.theme-red .footer-col h3 { color: #FF3B5C; }
 
 /* Grigio — Manifesti Fotografici */
 body.theme-grey .section-label,
@@ -2953,7 +2953,7 @@ body.theme-grey .work-nav-next { color: #E0E0E0; }
 body.theme-grey .btn-primary { background: #E0E0E0; }
 body.theme-grey .text-accent { color: #E0E0E0; }
 body.theme-grey .work-text h2 { color: #E0E0E0; }
-body.theme-grey .footer-col h4 { color: #E0E0E0; }
+body.theme-grey .footer-col h3 { color: #E0E0E0; }
 
 /* Arancio — Collage */
 body.theme-orange .section-label,
@@ -2964,7 +2964,7 @@ body.theme-orange .work-nav-next { color: #FF8C00; }
 body.theme-orange .btn-primary { background: #FF8C00; }
 body.theme-orange .text-accent { color: #FF8C00; }
 body.theme-orange .work-text h2 { color: #FF8C00; }
-body.theme-orange .footer-col h4 { color: #FF8C00; }
+body.theme-orange .footer-col h3 { color: #FF8C00; }
 
 /* Verde — Spotify */
 body.theme-green .section-label,
@@ -2975,7 +2975,7 @@ body.theme-green .work-nav-next { color: #1DB954; }
 body.theme-green .btn-primary { background: #1DB954; }
 body.theme-green .text-accent { color: #1DB954; }
 body.theme-green .work-text h2 { color: #1DB954; }
-body.theme-green .footer-col h4 { color: #1DB954; }
+body.theme-green .footer-col h3 { color: #1DB954; }
 
 /* Blu — Manifesti Tipografici */
 body.theme-blue .section-label,
@@ -2986,7 +2986,7 @@ body.theme-blue .work-nav-next { color: #5B9BFF; }
 body.theme-blue .btn-primary { background: #5B9BFF; }
 body.theme-blue .text-accent { color: #5B9BFF; }
 body.theme-blue .work-text h2 { color: #5B9BFF; }
-body.theme-blue .footer-col h4 { color: #5B9BFF; }
+body.theme-blue .footer-col h3 { color: #5B9BFF; }
 
 /* Viola — Illustra le Parole */
 body.theme-purple .section-label,
@@ -2997,7 +2997,7 @@ body.theme-purple .work-nav-next { color: #8B5CF6; }
 body.theme-purple .btn-primary { background: #8B5CF6; }
 body.theme-purple .text-accent { color: #8B5CF6; }
 body.theme-purple .work-text h2 { color: #8B5CF6; }
-body.theme-purple .footer-col h4 { color: #8B5CF6; }
+body.theme-purple .footer-col h3 { color: #8B5CF6; }
 
 /* Oro — Palestra Taekwondo */
 body.theme-yellow .section-label,
@@ -3008,4 +3008,4 @@ body.theme-yellow .work-nav-next { color: #FFD700; }
 body.theme-yellow .btn-primary { background: #FFD700; }
 body.theme-yellow .text-accent { color: #FFD700; }
 body.theme-yellow .work-text h2 { color: #FFD700; }
-body.theme-yellow .footer-col h4 { color: #FFD700; }
+body.theme-yellow .footer-col h3 { color: #FFD700; }

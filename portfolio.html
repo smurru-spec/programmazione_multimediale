@@ -3,7 +3,6 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta http-equiv="Cache-Control" content="no-store" />
 
   <!-- SEO -->
   <title>Portfolio — Sara Murru | Media Designer IED Roma</title>
@@ -39,7 +38,7 @@
   <!-- LIGHTBOX -->
   <div id="lightbox" role="dialog" aria-modal="true" aria-label="Visualizzazione immagine ingrandita">
     <button id="lightbox-close" aria-label="Chiudi lightbox">×</button>
-    <img id="lightbox-img" src="" alt="Immagine ingrandita" />
+    <img id="lightbox-img" src="data:," alt="">
   </div>
 
   <!-- COOKIE BANNER -->
@@ -122,7 +121,7 @@
           <div class="polaroid-wall-portfolio">
             <div class="polaroid" data-href="lavoro-spotify.html" style="--rot: -4deg;">
               <figure class="polaroid-img">
-                <img src="img/spotify-1.jpg.jpg" alt="Spotify Series — copertine e poster per l'era dello streaming" data-lightbox="img/spotify-1.jpg.jpg" />
+                <img src="img/spotify-1.jpg.jpg" alt="Spotify Series — copertine e poster per l'era dello streaming" />
                 <figcaption>Spotify Series — Photoshop, 2025</figcaption>
               </figure>
               <p>Spotify Series</p><span>Photoshop</span>
@@ -130,7 +129,7 @@
             </div>
             <div class="polaroid" data-href="lavoro-poster.html" style="--rot: 3deg;">
               <figure class="polaroid-img">
-                <img src="img/poster-1.jpg" alt="Poster grafici — composizioni visive bold" data-lightbox="img/poster-1.jpg" />
+                <img src="img/poster-1.jpg" alt="Poster grafici — composizioni visive bold" />
                 <figcaption>Poster — Photoshop, 2025</figcaption>
               </figure>
               <p>Poster</p><span>Photoshop</span>
@@ -138,7 +137,7 @@
             </div>
             <div class="polaroid" data-href="lavoro-illustra-parole.html" style="--rot: -6deg;">
               <figure class="polaroid-img">
-                <img src="img/illustra-1.jpg" alt="Illustra le Parole — emozioni tradotte in immagini" data-lightbox="img/illustra-1.jpg" />
+                <img src="img/illustra-1.jpg" alt="Illustra le Parole — emozioni tradotte in immagini" />
                 <figcaption>Illustra le Parole — Photoshop, 2025</figcaption>
               </figure>
               <p>Illustra le Parole</p><span>Photoshop</span>
@@ -146,7 +145,7 @@
             </div>
             <div class="polaroid" data-href="lavoro-collage.html" style="--rot: 5deg;">
               <figure class="polaroid-img">
-                <img src="img/collage-1.jpg" alt="Collage digitali — composizioni stratificate tra fotografia e texture" data-lightbox="img/collage-1.jpg" />
+                <img src="img/collage-1.jpg" alt="Collage digitali — composizioni stratificate tra fotografia e texture" />
                 <figcaption>Collage — Photoshop, 2025</figcaption>
               </figure>
               <p>Collage</p><span>Photoshop</span>
@@ -160,7 +159,7 @@
           <div class="polaroid-wall-portfolio">
             <div class="polaroid" data-href="lavoro-manifesti-foto.html" style="--rot: -3deg;">
               <figure class="polaroid-img">
-                <img src="img/manifesti-foto-1.jpg" alt="Manifesti Fotografici — la fotografia come linguaggio visivo primario" data-lightbox="img/manifesti-foto-1.jpg" />
+                <img src="img/manifesti-foto-1.jpg" alt="Manifesti Fotografici — la fotografia come linguaggio visivo primario" />
                 <figcaption>Manifesti Fotografici — Illustrator, 2025</figcaption>
               </figure>
               <p>Manifesti Fotografici</p><span>Illustrator</span>
@@ -168,7 +167,7 @@
             </div>
             <div class="polaroid" data-href="lavoro-manifesti-tipo.html" style="--rot: 6deg;">
               <figure class="polaroid-img">
-                <img src="img/manifesti-tipo-1.jpg" alt="Manifesti Tipografici — la parola come elemento visivo e compositivo" data-lightbox="img/manifesti-tipo-1.jpg" />
+                <img src="img/manifesti-tipo-1.jpg" alt="Manifesti Tipografici — la parola come elemento visivo e compositivo" />
                 <figcaption>Manifesti Tipografici — Illustrator, 2025</figcaption>
               </figure>
               <p>Manifesti Tipografici</p><span>Illustrator</span>
@@ -182,7 +181,7 @@
           <div class="polaroid-wall-portfolio">
             <div class="polaroid" data-href="lavoro-palestra.html" style="--rot: -5deg;">
               <figure class="polaroid-img">
-                <img src="img/palestra-1.jpg" alt="Palestra Taekwondo — sito web per una palestra di arti marziali" data-lightbox="img/palestra-1.jpg" />
+                <img src="img/palestra-1.jpg" alt="Palestra Taekwondo — sito web per una palestra di arti marziali" />
                 <figcaption>Palestra Taekwondo — Web Design, 2025</figcaption>
               </figure>
               <p>Palestra Taekwondo</p><span>Web Design</span>
@@ -215,14 +214,14 @@
             <img src="img/logo.png" alt="Sara Murru">
           </a>
           <p>Media designer romana. Design che lascia il segno, pensato per colpire nel profondo.</p>
-          <div class="social-links" aria-label="Social media">
+          <div class="social-links" role="list">
             <a href="https://it.linkedin.com/in/sara-murru-6b414a353" class="social-link" aria-label="LinkedIn" rel="noopener" target="_blank">in</a>
             <a href="https://www.instagram.com/_murrusara_?igsh=MXZjZmljdmwyMW53cw%3D%3D&utm_source=qr" class="social-link" aria-label="Instagram" rel="noopener" target="_blank">ig</a>
           </div>
         </div>
 
         <div class="footer-col">
-          <h4>Navigazione</h4>
+          <h3>Navigazione</h3>
           <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="bio.html">Bio</a></li>
@@ -232,7 +231,7 @@
         </div>
 
         <div class="footer-col">
-          <h4>Lavori</h4>
+          <h3>Lavori</h3>
           <ul>
             <li><a href="lavoro-spotify.html">Spotify Series</a></li>
             <li><a href="lavoro-poster.html">Poster</a></li>
@@ -243,7 +242,7 @@
         </div>
 
         <div class="footer-col">
-          <h4>Contatti</h4>
+          <h3>Contatti</h3>
           <ul>
             <li><a href="mailto:s.murru@ied.edu">s.murru@ied.edu</a></li>
             <li><a href="contatti.html">Scrivimi</a></li>
