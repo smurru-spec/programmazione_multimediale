@@ -1041,11 +1041,11 @@ function initMusicPlayer() {
     { file: 'audio/Freaks_SurfCurse.mp3', title: 'Freaks — Surf Curse' },
     { file: 'audio/505 _ArcticMonkeys.mp3', title: '505 — Arctic Monkeys' },
     { file: 'audio/DelVerde_Calcuttamp3.mp3', title: 'Del Verde — Calcutta' },
-    { file: 'audio/UpDown_T-Pain.mp3', title: 'Up Down — T-Pain' },
+    { file: 'audio/UpDown_TPain_Real.mp3', title: 'Up Down — T-Pain' },
     { file: 'audio/Affogare_Legno.mp3', title: 'Affogare — Legno' },
     { file: 'audio/ManonLisa_LePetitPe\u0302cheur.mp3', title: 'Manon Lisa — Le Petit Pêcheur' },
     { file: 'audio/BaciamiBaciami_Fulminacci.mp3', title: 'Baciami Baciami — Fulminacci' },
-    { file: 'audio/stupidascusa_StillCharles.mp3', title: 'Stupida Scusa — Still Charles' },
+    { file: 'audio/StupidaScusa.mp3', title: 'Stupida Scusa — Still Charles' },
   ];
 
   const savedSong = sessionStorage.getItem('currentSong');
