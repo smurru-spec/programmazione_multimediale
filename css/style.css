@@ -1307,6 +1307,7 @@ p {
   grid-template-columns: repeat(2, 1fr);
   gap: 16px;
   margin-top: 60px;
+  align-items: start;
 }
 
 .vinyl-item {
@@ -1314,13 +1315,11 @@ p {
   display: flex;
   flex-direction: column;
   gap: 16px;
+  min-width: 0;
 }
 
 .vinyl-sleeve {
   position: relative;
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 1fr;
   width: 100%;
   aspect-ratio: 1 / 1;
   overflow: hidden;
@@ -1329,33 +1328,28 @@ p {
 }
 
 .vinyl-sleeve-img {
-  grid-area: 1 / 1;
+  position: absolute;
+  inset: 0;
   width: 100%;
   height: 100%;
-  min-height: 0;
+  max-width: none;
   object-fit: cover;
   object-position: center;
-  border-radius: 0;
   display: block;
   z-index: 2;
-  align-self: stretch;
-  justify-self: stretch;
   transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
 .vinyl-disc {
-  grid-area: 1 / 1;
-  position: relative;
-  top: auto;
-  right: auto;
-  justify-self: end;
-  align-self: center;
+  position: absolute;
+  top: 50%;
+  right: 6%;
   width: 88%;
-  height: 88%;
-  margin-right: 8%;
+  aspect-ratio: 1;
   border-radius: 50%;
   background: url('../img/disco.png') center/cover no-repeat;
   z-index: 1;
+  transform: translateY(-50%);
   transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   box-shadow: -4px 0 20px rgba(0,0,0,0.8);
 }
@@ -1365,7 +1359,7 @@ p {
 }
 
 .vinyl-item:hover .vinyl-disc {
-  transform: translateX(28%) rotate(12deg);
+  transform: translateY(-50%) translateX(28%) rotate(12deg);
 }
 
 .vinyl-label span {
