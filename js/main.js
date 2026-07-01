@@ -425,21 +425,46 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   /* ----------------------------------------------------------
-     COOKIE BANNER
+     COOKIE BANNER — riappare a ogni nuova sessione di navigazione
      ---------------------------------------------------------- */
   const cookieBanner = document.getElementById('cookie-banner');
   const acceptBtn    = document.getElementById('accept-cookies');
 
   if (cookieBanner) {
-    if (!localStorage.getItem('cookieAccepted')) {
-      setTimeout(() => { cookieBanner.style.display = 'block'; }, 1500);
+    localStorage.removeItem('cookieAccepted');
+
+    function showCookieBanner() {
+      if (sessionStorage.getItem('cookieAccepted')) return;
+      cookieBanner.style.display = 'block';
+    }
+
+    function scheduleCookieBanner(delay = 1500) {
+      if (sessionStorage.getItem('cookieAccepted')) return;
+      setTimeout(showCookieBanner, delay);
     }
 
     if (acceptBtn) {
       acceptBtn.addEventListener('click', () => {
-        localStorage.setItem('cookieAccepted', 'true');
+        sessionStorage.setItem('cookieAccepted', 'true');
         cookieBanner.style.display = 'none';
       });
+    }
+
+    const introOverlay = document.getElementById('intro-overlay');
+    const introActive = introOverlay
+      && !sessionStorage.getItem('introSeen')
+      && introOverlay.style.display !== 'none';
+
+    if (introActive) {
+      const introObserver = new MutationObserver(() => {
+        if (introOverlay.style.display === 'none' || introOverlay.classList.contains('hidden')) {
+          introObserver.disconnect();
+          scheduleCookieBanner(600);
+        }
+      });
+      introObserver.observe(introOverlay, { attributes: true, attributeFilter: ['class', 'style'] });
+    } else {
+      scheduleCookieBanner(1500);
     }
   }
 
